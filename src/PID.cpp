@@ -12,6 +12,20 @@ PID::PID(const float kP, const float kI, const float kD)
 }
 
 /**
+ * Construct a new PID controller by copying the given PID controller
+ * @param pid The PID controller to copy into this one
+ */
+PID::PID(const PID& pid)
+{
+	kP = pid.kP;
+	kI = pid.kI;
+	kD = pid.kD;
+	prevError = pid.prevError;
+	sumError = pid.sumError;
+	prevTime = pid.prevTime;
+}
+
+/**
  * Updates the PID constants to the given values and
  * calls PID::resetTime()
  * @param kP The new proportional constant

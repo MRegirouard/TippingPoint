@@ -10,6 +10,7 @@ class PID
 {
 public:
 	PID(const float kP, const float kI = 0, const float kD = 0);
+	PID(const PID& pid);
 	void updateConstants(const float kP, const float kI = 0, const float kD = 0);
 	float calcPID(const float error);
 	void resetTime();
