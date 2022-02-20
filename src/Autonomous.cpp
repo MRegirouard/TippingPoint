@@ -28,9 +28,9 @@ std::vector<const char*> Autonomous::createAutonColorStrs()
 {
 	std::vector<const char*> autonColorStrs = std::vector<const char*>(3);
 
-	autonColorStrs[NO_COLOR] = "None";
-	autonColorStrs[RED] = "Red";
-	autonColorStrs[BLUE] = "Blue";
+	autonColorStrs[NO_COLOR - NO_COLOR] = "None";
+	autonColorStrs[RED - NO_COLOR] = "Red";
+	autonColorStrs[BLUE - NO_COLOR] = "Blue";
 
 	return autonColorStrs;
 }
